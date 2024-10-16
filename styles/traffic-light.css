@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.traffic-light {
+    width: 100px;
+    background-color: #393535;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.one {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    align-items: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+@keyframes changeLight {
+    0% {
+        opacity: 10;
+    }
+    25% {
+        opacity: .3;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 10;
+    }
+}
+
+.red {
+    animation: changeLight 10s infinite;
+}
+
+.yellow {
+    animation: changeLight 10s infinite;
+    animation-delay: 8s;
+}
+
+.green {
+    animation: changeLight 10s infinite;
+    animation-delay: 4s;
+}
